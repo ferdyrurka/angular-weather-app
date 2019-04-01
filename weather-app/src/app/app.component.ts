@@ -10,8 +10,6 @@ import { map } from 'rxjs/operators';
 })
 
 export class AppComponent {
-  title = 'weather-app';
-
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches)
