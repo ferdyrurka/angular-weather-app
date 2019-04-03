@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { MatMenuModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from "@angular/material";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { LayoutModule } from '@angular/cdk/layout';
+import { HomeComponent } from './home/component/home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
