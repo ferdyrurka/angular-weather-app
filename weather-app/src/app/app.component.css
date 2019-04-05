@@ -20,7 +20,7 @@
 
 .container {
   color: #1a1a1a !important;
-  margin-left: 10px;
-  margin-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   background-color: #fff !important;
 }
