@@ -5,6 +5,7 @@
 Mini project for learning TypeScript and Angular7.
 I understand this application have a security gap (OWM Api key is public), but this 
 project is only to learning Angular.
+I used in this project only E2E tests.
 
 ## Stack
 
