@@ -3,3 +3,9 @@
 body{
   margin: 0 !important;
 }
+
+.title-page {
+  width: 100%;
+  text-align: center;
+  font-size: 28px;
+}
