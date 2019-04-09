@@ -1,4 +1,1 @@
-body{
-  margin: 0 !important;
-}
-
+@import '../node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css';
