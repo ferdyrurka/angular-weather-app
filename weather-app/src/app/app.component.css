@@ -1,5 +1,3 @@
-@import '../../node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css';
-
 .sidenav-container {
   height: 100%;
 }
@@ -19,8 +17,6 @@
 }
 
 .container {
-  color: #1a1a1a !important;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: #fff !important;
 }
