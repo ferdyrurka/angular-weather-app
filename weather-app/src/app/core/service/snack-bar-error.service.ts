@@ -1,5 +1,5 @@
 import {Injectable} from "@angular/core";
-import {MatSnackBar} from "@angular/material";
+import {MatSnackBar, MatSnackBarRef, SimpleSnackBar} from "@angular/material";
 import {Subscription} from "rxjs";
 
 @Injectable({
@@ -27,6 +27,10 @@ export class SnackBarErrorService {
       }
     );
 
+    this.subscriptionAfterDismissed(matSnackBarRef);
+  }
+
+  private subscriptionAfterDismissed(matSnackBarRef:MatSnackBarRef<SimpleSnackBar>): void {
     this.matSnackBarSubscribe = matSnackBarRef.afterDismissed().subscribe(() => {
       this.blockShowSnackBarError = false;
       this.matSnackBarSubscribe.unsubscribe();
