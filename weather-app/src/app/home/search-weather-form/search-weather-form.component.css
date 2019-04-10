@@ -1,0 +1,27 @@
+.search-weather-wrapper {
+  width: 100%;
+}
+
+.search-weather-wrapper > mat-form-field {
+  width: 77%;
+  margin-left: 3%;
+}
+
+.search-weather-wrapper > button {
+  width: 16%;
+  float: right;
+  margin-right: 3%;
+  margin-left: 1%;
+}
+
+@media only screen and (max-width: 900px) {
+  .search-weather-wrapper > mat-form-field {
+    width: 96%;
+    margin: 0 2%;
+  }
+
+  .search-weather-wrapper > button {
+    width: 96%;
+    margin: 0 2%;
+  }
+}

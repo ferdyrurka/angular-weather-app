@@ -1,0 +1,15 @@
+<div class="search-weather-wrapper">
+  <mat-form-field>
+     <input matInput placeholder="City name" required
+            [value]="model.cityName" [(ngModel)]="model.cityName"
+            #cityName="ngModel">
+  </mat-form-field>
+  <button mat-stroked-button (click)="gotoCurrentWeather()"
+          [disabled]="cityName.valid || cityName.pristine">
+    Search weather...
+  </button>
+
+  <div *ngIf="!cityName.valid && !cityName.untouched;">
+    {{ snackBarError.openSnackBarError('City name is required!') }}
+  </div>
+</div>
