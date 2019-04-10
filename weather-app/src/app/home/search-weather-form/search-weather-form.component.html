@@ -5,11 +5,11 @@
             #cityName="ngModel">
   </mat-form-field>
   <button mat-stroked-button (click)="gotoCurrentWeather()"
-          [disabled]="cityName.valid || cityName.pristine">
+          [disabled]="cityName.invalid">
     Search weather...
   </button>
 
-  <div *ngIf="!cityName.valid && !cityName.untouched;">
+  <div *ngIf="cityName.invalid && !cityName.untouched;">
     {{ snackBarError.openSnackBarError('City name is required!') }}
   </div>
 </div>
