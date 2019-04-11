@@ -12,9 +12,9 @@ import { environment } from '../../../environments/environment';
 })
 export class APIClientOWMService {
 
-  static readonly HOURLY_WEATHER = 'https://api.openweathermap.org/data/2.5/forecast/hourly?q=%city%&appid=%apiKey%';
+  static readonly HOURLY_WEATHER = 'https://api.openweathermap.org/data/2.5/forecast/hourly?q=%city%&units=metric&appid=%apiKey%';
 
-  static readonly CURRENT_WEATHER = 'https://api.openweathermap.org/data/2.5/weather?q=%city%&appid=%apiKey%';
+  static readonly CURRENT_WEATHER = 'https://api.openweathermap.org/data/2.5/weather?q=%city%&units=metric&appid=%apiKey%';
 
   constructor(private httpClient:HttpClient ) { }
 
