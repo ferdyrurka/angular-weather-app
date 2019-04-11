@@ -9,27 +9,37 @@ import {
   MatButtonModule,
   MatSidenavModule,
   MatIconModule,
-  MatListModule, MatSelectModule, MatInputModule
+  MatListModule,
+  MatSelectModule,
+  MatInputModule,
+  MatSnackBarModule,
+  MatProgressSpinnerModule,
+  MatTabsModule,
+  MatTableModule, MatExpansionModule
 } from "@angular/material";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { LayoutModule } from '@angular/cdk/layout';
 import { HomeComponent } from './home/home/home.component';
-import { CurrentWeatherComponent } from './weather/current-weather/current-weather.component';
+import { WeatherComponent } from './weather/weather/weather.component';
 import { HttpClientModule } from "@angular/common/http";
 import { SearchWeatherFormComponent } from './home/search-weather-form/search-weather-form.component';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {FormsModule} from "@angular/forms";
+import { TodayWeatherComponent } from './weather/today-weather/today-weather.component';
+import { NextDayWeatherComponent } from './weather/next-day-weather/next-day-weather.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CurrentWeatherComponent,
-    SearchWeatherFormComponent
+    WeatherComponent,
+    SearchWeatherFormComponent,
+    TodayWeatherComponent,
+    NextDayWeatherComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatMenuModule,
     LayoutModule,
@@ -40,7 +50,12 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     MatListModule,
     FormsModule,
     MatSelectModule,
-    MatInputModule
+    MatInputModule,
+    MatSnackBarModule,
+    MatProgressSpinnerModule,
+    MatTabsModule,
+    MatTableModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
