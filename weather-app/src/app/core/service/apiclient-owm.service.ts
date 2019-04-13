@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import {OwmUrlValidator} from "../validator/owm-url.validator";
 import { HttpClient, HttpErrorResponse, HttpResponse} from "@angular/common/http";
 import { Observable } from "rxjs";
 import {catchError, retry} from "rxjs/operators";
@@ -16,10 +15,10 @@ export class APIClientOWMService {
 
   static readonly CURRENT_WEATHER = 'https://api.openweathermap.org/data/2.5/weather?q=%city%&units=metric&appid=%apiKey%';
 
-  constructor(private httpClient:HttpClient ) { }
+  constructor(private httpClient:HttpClient) { }
 
   public getWeather(url:string, cityName:string): Observable<HttpResponse<string>> {
-      if (!OwmUrlValidator.validate(url)) {
+      if (!this.validate(url)) {
           throw new Error('URL is undefined by: ' + url);
       }
 
@@ -27,6 +26,12 @@ export class APIClientOWMService {
       weatherObservable = this.callToOWM(this.prepareUrl(url, cityName));
 
       return weatherObservable;
+  }
+
+  private validate(url:string): boolean {
+    return !(APIClientOWMService.CURRENT_WEATHER !== url &&
+      APIClientOWMService.HOURLY_WEATHER !== url)
+    ;
   }
 
   private prepareUrl(url:string, cityName:string): string {
