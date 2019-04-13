@@ -41,7 +41,6 @@ export class TodayWeatherComponent implements OnInit {
 
     this.weatherSubscription = this.apiClientOWMService.getWeather(APIClientOWMService.HOURLY_WEATHER, cityName)
       .subscribe((res) => {
-        this.errorBlockShow = false;
         let weatherOWM = Array(res.body);
         this.weathers = this.hourlyWeathersParser.toToday(weatherOWM[0]['list']);
         this.weatherSubscription.unsubscribe();
