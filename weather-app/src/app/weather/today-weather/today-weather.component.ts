@@ -3,6 +3,7 @@ import {ActivatedRoute} from "@angular/router";
 import {APIClientOWMService} from "../../core/service/apiclient-owm.service";
 import {Subscription} from "rxjs";
 import {SnackBarErrorService} from "../../core/service/snack-bar-error.service";
+import {HourlyWeathersParser} from "../../core/parser/hourly-weathers.parser";
 
 @Component({
   selector: 'app-today-weather',
@@ -25,7 +26,8 @@ export class TodayWeatherComponent implements OnInit {
   constructor(
     private activatedRoute:ActivatedRoute,
     private apiClientOWMService:APIClientOWMService,
-    private snackBarError:SnackBarErrorService
+    private snackBarError:SnackBarErrorService,
+    private hourlyWeathersParser:HourlyWeathersParser
   ) { }
 
   ngOnInit() {
@@ -41,41 +43,12 @@ export class TodayWeatherComponent implements OnInit {
       .subscribe((res) => {
         this.errorBlockShow = false;
         let weatherOWM = Array(res.body);
-        this.weathers = this.hourlyToToday(Array(weatherOWM[0]['list']));
+        this.weathers = this.hourlyWeathersParser.toToday(weatherOWM[0]['list']);
         this.weatherSubscription.unsubscribe();
       }, error =>  {
         this.errorBlockShow = true;
         this.snackBarError.openSnackBarError(error.message);
       })
     ;
-  }
-
-  private getCurrentDate(): string {
-    let date = new Date();
-    let dd = String(date.getDate()).padStart(2, '0');
-    let mm = String(date.getMonth() + 1).padStart(2, '0');
-    let yyyy = date.getFullYear();
-
-    return  yyyy + '-' + mm + '-' + dd;
-  }
-
-  private hourlyToToday(weathers:any): [] {
-    let currentDate = this.getCurrentDate();
-    let i:number = 0;
-    let todayWeather:any = [];
-
-    for (let weather of weathers[0]) {
-      weather = weather as Object;
-
-      if (!weather.dt_txt.search(currentDate)) {
-        todayWeather[i] = weather;
-        ++i;
-        continue;
-      }
-
-      break;
-    }
-
-    return todayWeather;
   }
 }
