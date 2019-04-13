@@ -32,10 +32,10 @@ export class TodayWeatherComponent implements OnInit {
 
   ngOnInit() {
     let cityName:string = this.activatedRoute.snapshot.paramMap.get('cityName');
-    this.searchTodayWeather(cityName);
+    this.searchTodayForecast(cityName);
   }
 
-  public searchTodayWeather(cityName:string): void {
+  public searchTodayForecast(cityName:string): void {
     this.weathers = null;
     this.errorBlockShow = false;
 
