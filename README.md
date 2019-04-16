@@ -3,6 +3,8 @@
 ## Description
 
 Mini project for learning TypeScript and Angular7.
+I understand this application have a security bug (OWM Api key is public), but this 
+project is only to learning Angular.
 In this project I don't practise test (among others Unit, Integration, E2E, Functional etc.).
 
 ## Stack
@@ -22,9 +24,22 @@ npm install
 
 ## Run server
 
+### All
+
+Prepare environments (OWM API KEY)
+
+### Developer
+
 ```sh
 cd weather-app
 npm start
+```
+
+### Production
+
+```sh
+cd weather-app
+npm ng --open --prod
 ```
 
 ## License
