@@ -1,4 +1,4 @@
 export const environment = {
-  production: true,
+  production: false,
   owmAPIKey: 'your api key by open weather map'
 };
