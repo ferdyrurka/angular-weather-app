@@ -5,14 +5,28 @@
 Mini project for learning TypeScript and Angular7.
 I understand this application have a security bug (OWM Api key is public), but this 
 project is only to learning Angular.
-I used in this project only E2E tests.
+In this project I don't practise test (among others Unit, Integration, E2E, Functional etc.).
 
 ## Stack
 
 * TypeScript3
 * Angular7
 * Material angular
-* Docker
+
+## Install
+
+if you install npm and node (10.15.3)
+
+```sh
+npm install
+```
+
+## Run server
+
+```sh
+cd weather-app
+npm start
+```
 
 ## License
 
