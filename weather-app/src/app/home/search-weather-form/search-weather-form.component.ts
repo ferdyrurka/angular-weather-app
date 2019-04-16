@@ -11,9 +11,9 @@ import {SnackBarErrorService} from "../../core/service/snack-bar-error.service";
 })
 export class SearchWeatherFormComponent {
 
-  private model = new SearchWeather('Warsaw');
+  public model = new SearchWeather('Warsaw');
 
-  constructor(private router:Router, public snackBarError:SnackBarErrorService) {}
+  constructor(public router:Router, public snackBarError:SnackBarErrorService) {}
 
   public gotoCurrentWeather(): void {
     this.router.navigate(

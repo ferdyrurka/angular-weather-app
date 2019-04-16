@@ -12,22 +12,22 @@ import {HourlyWeathersParser} from "../../core/parser/hourly-weathers.parser";
 })
 export class TodayWeatherComponent implements OnInit {
 
-  private weathers = null;
+  public weathers = null;
 
-  private weatherSubscription:Subscription;
+  public weatherSubscription:Subscription;
 
-  private errorBlockShow:boolean = false;
+  public errorBlockShow:boolean = false;
 
-  private readonly displayedColumns: string[] = [
+  public readonly displayedColumns: string[] = [
     'date', 'description', 'temp_min', 'temp_max',
     'humidity', 'wind'
   ];
 
   constructor(
-    private activatedRoute:ActivatedRoute,
-    private apiClientOWMService:APIClientOWMService,
-    private snackBarError:SnackBarErrorService,
-    private hourlyWeathersParser:HourlyWeathersParser
+    public activatedRoute:ActivatedRoute,
+    public apiClientOWMService:APIClientOWMService,
+    public snackBarError:SnackBarErrorService,
+    public hourlyWeathersParser:HourlyWeathersParser
   ) { }
 
   ngOnInit() {

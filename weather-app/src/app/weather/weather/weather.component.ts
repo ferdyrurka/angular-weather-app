@@ -12,21 +12,21 @@ import {SearchWeather} from "../../core/model/search-weather";
 })
 export class WeatherComponent implements OnInit {
 
-  private weather = null;
+  public weather = null;
 
-  private errorBlockShow:boolean = false;
+  public errorBlockShow:boolean = false;
 
-  private cityName:string;
+  public cityName:string;
 
-  private weatherSubscription:Subscription;
+  public weatherSubscription:Subscription;
 
-  private searchWeather:SearchWeather;
+  public searchWeather:SearchWeather;
 
   constructor(
-    private activatedRouter:ActivatedRoute,
-    private router:Router,
-    private apiClientOWMService:APIClientOWMService,
-    private snackBarError:SnackBarErrorService
+    public activatedRouter:ActivatedRoute,
+    public router:Router,
+    public apiClientOWMService:APIClientOWMService,
+    public snackBarError:SnackBarErrorService
   ) {}
 
   ngOnInit() {
