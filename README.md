@@ -46,7 +46,7 @@ npm start
 
 ```sh
 cd weather-app
-npm build
+npm run-script build
 
 cd ../
 docker-compose up -d
