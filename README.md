@@ -32,14 +32,24 @@ Prepare environments (OWM API KEY)
 
 ```sh
 cd weather-app
-npm start
+ng --open
 ```
 
 ### Production
 
 ```sh
 cd weather-app
-npm ng --open --prod
+npm start
+```
+
+## Run server with docker
+
+```sh
+cd weather-app
+npm build
+
+cd ../
+docker-compose up -d
 ```
 
 ## License
