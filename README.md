@@ -12,6 +12,7 @@ In this project I don't practise test (among others Unit, Integration, E2E, Func
 * TypeScript3
 * Angular7
 * Material angular
+* Docker
 
 ## Install
 
