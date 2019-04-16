@@ -27,7 +27,7 @@ npm install
 
 ### All
 
-Prepare environments (OWM API KEY)
+Prepare [environments](weather-app/src/environments) (OWM API KEY)
 
 ### Developer
 
@@ -45,10 +45,23 @@ npm start
 
 ## Run server with docker
 
+### Developer
+
+```sh
+cd weather-app
+ng build
+```
+
+### Production
+
 ```sh
 cd weather-app
 npm run-script build
+```
 
+### Docker
+
+```sh
 cd ../
 docker-compose up -d
 ```
