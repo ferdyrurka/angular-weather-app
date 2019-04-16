@@ -18,6 +18,7 @@ In this project I don't practise test (among others Unit, Integration, E2E, Func
 if you install npm and node (10.15.3)
 
 ```sh
+cd weather-app
 npm install
 ```
 
