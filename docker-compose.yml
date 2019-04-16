@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  nginx:
+    image: nginx-front-angular-weather-app
+    build:
+      context: etc
+      dockerfile: nginxFront.Dockerfile
+    volumes:
+      - ./weather-app/dist/weather-app:/usr/share/nginx/html
+    ports:
+      - 80:80
