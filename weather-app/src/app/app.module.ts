@@ -26,6 +26,7 @@ import { SearchWeatherFormComponent } from './home/search-weather-form/search-we
 import {FormsModule} from "@angular/forms";
 import { TodayWeatherComponent } from './weather/today-weather/today-weather.component';
 import { NextDayWeatherComponent } from './weather/next-day-weather/next-day-weather.component';
+import { NotFoundComponent } from './errors/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { NextDayWeatherComponent } from './weather/next-day-weather/next-day-wea
     WeatherComponent,
     SearchWeatherFormComponent,
     TodayWeatherComponent,
-    NextDayWeatherComponent
+    NextDayWeatherComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
